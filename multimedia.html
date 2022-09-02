@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="ro">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Multimedia</title>
   </head>
   <body>
     
     <p>Imagini</p>
-    <img src="https://www.itschool.ro/images/logo-itschool-light.svg" alt="IT School logo"/>
+    <!-- Atributul src reprezinta sursa imaginii. Poate sa fie un link (daca imaginea este stocata pe un server) sau calea catre imaginea de pe calculatorul nostru.
+    Atributul alt este afisat/luat in calcul cand imaginea nu poate fi afisata. Adica daca serverul este picat, sau userul acceseaza site-ul cu un screen reader.
+    In mod normal width-ul este setat din CSS. -->
+    <img src="https://www.itschool.ro/images/logo-itschool-light.svg" alt="IT School logo" width="200px"/>
 
     <br>
+    <!-- Cum dam calea: pornim de la numele folderului aflat in acelasi folder cu fisierul nostru. Pentru a intra in folderul respectiv, punem caracterul "/". Ulterior scriem numele fisierului ce contine imaginea. -->
     <img src="images/poza1.png" alt="Poza1" width="250"/>
 
     <p>Video</p>
-
+    <!-- Nu omite atributul controls, pentru a ii permite userului sa interactioneze cu videoclipul.-->
     <video controls width="400">
+      <!-- source contine sursa videoclipului (poate fi si un link), precum si tipul videoclipului. -->
       <source src="videos/video.mp4" type="video/mp4">
     </video>
 
+    <p>Video de pe Youtube </p>
+    <!-- De cele mai multe ori, cand vine vorba de video, este indicat sa fie pus pe youtube si incorporat in site-ul nostru. Practic, vrem sa includem un alt site (YouTube) in site-ul nostru. Pentru asta, folosim tag-ul iframe.
+    Mergem la videoclipul de pe Youtube, dam click pe butonul de share, dupa pe embed (incorporeaza). Ni se va genera iframe-ul, pe care il luam cu copy paste. -->
     <iframe width="560" height="315" src="https://www.youtube.com/embed/kUMQ-bRxOjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   </body>

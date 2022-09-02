@@ -9,19 +9,29 @@
       <h1> Login Form </h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, repellat.</p>
 
+      <!-- Intreg continutul formularului este impachetat de tag-ul form -->
       <form>
+        <!-- Atributul for al tag-ului label trebuie sa aiba acceasi valoare cu a atributului id al tag-ului input. -->
         <label for="username">Nume utilizator</label>
+        <!-- input type text este ultilizat cand vrem ca userul sa introduca text.
+        Atributul name este necesar pentru trimiterea datelor catre server.
+        Atributul placeholder va contine textul pe care utilizatorul il va vedea pana cand va incepe sa scrie ceva.
+        Atributul required il obliga pe user sa completeze inputul. -->
         <input id="username" type="text" placeholder="Ex: Bob" required/>
         <br>
         <label for="password">Parola</label>
-        <input id="password" type="password"/>
+        <!-- input type password pune buline in loc de caractere. -->
+        <input id="password" type="password" required/>
         <br>
         <label for="color">Culoarea preferata</label>
         <input id="color" type="color"/>
 
         <p>Care sunt <b>cele</b> mai <i>comune</i> topicuri?</p>
         <label for="html-css">HTML & CSS</label>
-        <input id="html-css" type="checkbox" name="html-css" checked />
+        <!-- input type checkbox este o casuta ce poate fi bifata.
+        Atributul checked va afisa casuta direct bifata.
+        Atributul disabled va impiedica interactiunea userului cu inputul. -->
+        <input id="html-css" type="checkbox" name="html-css" checked disabled/>
 
         <label for="javascript">JavaScript</label>
         <input id="javascript" type="checkbox" name="javascript" />
@@ -31,19 +41,26 @@
 
         <p>Care din topicuri te intereseaza mai mult?</p>
         <label for="git">Git & GitHub</label>
+        <!-- input type radio este un cerc pe poate fi bifat.
+        Diferenta intre radio si checkbox este ca dintre 3 inputuri type radio grupate, poti alege doar unul. La checkbox poti alege oricate, intre 0 si 3.
+        Cum grupam inputurile type radio? Le dam aceeasi valoare pentru atributul name (in acest caz favorite).
+        Pentru radio, este nevoie sa dam o valoare si pentru atributul value, intrucat serverul trebuie sa stie ce valoare a fost aleasa (avem acelasi nume). -->
         <input id="git" type="radio" name="favorite" value="git"/>
 
         <label for="javascript2">JavaScript</label>  
         <input id="javascript2" type="radio" name="favorite" value="javascript"/>
 
+        <label for="html2">HTML</label>  
+        <input id="html2" type="radio" name="favorite" value="html"/>
+
         <br>  
         <br>
-        
+        <!-- Input type submit este un buton, care atunci cand este apasat submite formularul.
+        Valoarea atributului value este textul afisat pe ecran pentru buton. -->
         <input type="submit" value="Trimite formular"/>
 
-        <br>
-        <br>
-        <button>Sau mai trimite o data</button>
+        <!-- O alta varianta pentru butonul de submitere este sa folosim tag-ul button. -->
+        <!-- <button>Inregistreaza-te</button> -->
       </form>
 
     </div>
@@ -51,7 +68,8 @@
     <div>
       <br>
       <br>
-      <button>Acest buton nu face nimic</button>
+      <!-- Daca butonul este in afara formularului, nu il submite. -->
+      <button>Acest buton nu submite formularul</button>
     <div>
 
   </body>
